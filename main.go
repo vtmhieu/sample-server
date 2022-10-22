@@ -40,7 +40,6 @@ func main() {
 	server.Use(cors.New(corsConfig))
 	router := gin.Default()
 	server.Use(cors.New(corsConfig))
-	router = server.Group("/api")
 
 	router.GET("/healthchecker", func(ctx *gin.Context) {
 		message := "Welcome to VCS Server Management System"
